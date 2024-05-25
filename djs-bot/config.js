@@ -6,7 +6,7 @@ module.exports = {
 	/**
 	 * Name of the bot 
 	 * @type {string} */
-	name: "InsertNameHereBot",
+	name: "DJ Theia",
 	/**
 	 * Database option (mongodb, postgresql) https://www.prisma.io/docs/reference/database-reference/connection-urls
 	 * @type {string} */
@@ -22,7 +22,7 @@ module.exports = {
 	/**
 	 * UID for the Admin(s) of the bot  
 	 * @type {string | string[]} */
-	ownerId: process.env.DEVUID || ["AdminID"],
+	ownerId: process.env.DEVUID || [""],
 	/** 
 	 * Token for bot login
 	 * @type {string} */
@@ -71,15 +71,6 @@ module.exports = {
 	 * Nodes to connect to
 	 * @type {import("erela.js").Node[]} */
 	nodes: [
-		{
-			identifier: "DockerNode", // log id string
-			host: "docker.lavalink",
-			port: 2333,
-			password: "youshallnotpass",
-			retryAmount: 15, // for lavalink connection attempts
-			retryDelay: 6000, // Delay between reconnect attempts if connection is lost.
-			secure: false, // if lavalink is running SSL
-		},
 		{
 			identifier: "LocalNode", // log id string
 			host: "localhost",
